@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <style>
+    .slide-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-container">
+        <swiper-container class="mySwiper">
+            <swiper-slide>
+            <img src="images/product-big-1-600x366.jpg">
+            </swiper-slide>
+            
+            <swiper-slide>
+            <img src="images/product-big-1-600x366.jpg">
+            </swiper-slide>
+            
+            <swiper-slide>
+            <img src="images/product-big-1-600x366.jpg">
+            </swiper-slide>
+
+
+        </swiper-container>
+        <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+    </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+       breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        480: {
+          slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 1,
+        },
+        1200: {
+          slidesPerView: 1,
+        },
+      },
+    });
+    
+   
+    
+    
+   
+  </script>
+</body>
+
+</html>
